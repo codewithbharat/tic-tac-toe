@@ -1,6 +1,6 @@
 # Getting Started with Tic-Tac-toe Game
 
-##Clone this repo first.
+### Clone this repo first.
 
 ## Available Scripts
 
