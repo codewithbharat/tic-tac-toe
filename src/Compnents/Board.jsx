@@ -24,7 +24,6 @@ const Board = () => {
             }
         }
 
-
         return false;
     }
 
@@ -36,7 +35,8 @@ const Board = () => {
             copyState[index] = isXTurn ? 'X' : 'O';
             setState(copyState);
             setIsXTurn(!isXTurn);
-        } else {
+        }
+        else {
             alert(`already checked by '${copyState[index]}'!`);
         }
     }

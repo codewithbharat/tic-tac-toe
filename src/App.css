@@ -6,8 +6,20 @@
 
 .board-container {
   margin: auto;
-  height: 300px;
+  padding: 20px;
+  height: auto;
   width: 300px;
+  background: black;
+  color: white;
+}
+
+.square {
+  border: 0.5px solid rgb(234, 219, 219);
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 
 .text {
