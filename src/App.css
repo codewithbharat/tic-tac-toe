@@ -34,6 +34,11 @@ body {
   align-items: center
 }
 
+.sqaureText {
+  font-size: 80px;
+  font-weight: 20;
+}
+
 .playerTurn {
   font-size: 25px;
   margin: 10px;

@@ -19,11 +19,6 @@ const Board = () => {
                 console.log(count);
             }
         }
-
-        if (count === 0) {
-            alert(`GAME OVER`);
-            handleReset();
-        }
         const winnerLogic = [
             [0, 1, 2],
             [3, 4, 5],
@@ -40,6 +35,11 @@ const Board = () => {
             if (state[a] !== null && state[a] === state[b] && state[b] === state[c]) {
                 return state[a];
             }
+        }
+
+        if (count === 0) {
+            alert(`GAME OVER`);
+            handleReset();
         }
 
         return false;
