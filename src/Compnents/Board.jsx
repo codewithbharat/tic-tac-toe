@@ -5,7 +5,25 @@ const Board = () => {
     const [state, setState] = useState(Array(9).fill(null));
     const [isXTurn, setIsXTurn] = useState(true);
 
+    const handleReset = () => {
+        setState(Array(9).fill(null));
+    }
+
     const checkWinner = () => {
+
+        const copyState = Object.values({ ...state });
+        let count = 0;
+        for (let value of copyState) {
+            if (value == null) {
+                count++;
+                console.log(count);
+            }
+        }
+
+        if (count === 0) {
+            alert(`GAME OVER`);
+            handleReset();
+        }
         const winnerLogic = [
             [0, 1, 2],
             [3, 4, 5],
@@ -41,9 +59,6 @@ const Board = () => {
         }
     }
 
-    const handleReset = () => {
-        setState(Array(9).fill(null));
-    }
     return (
         <div className="board-container">
             {isWinner ?
