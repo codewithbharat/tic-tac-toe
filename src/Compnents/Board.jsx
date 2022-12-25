@@ -51,7 +51,7 @@ const Board = () => {
                     <span>Player "{isWinner}" won the battel!</span>
                     <button onClick={handleReset}>Play Again</button>
                 </> :
-                <>  <h4>Player '{isXTurn ? 'X' : "O"}' your Turn</h4>
+                <>  <h4 className="playerTurn">Player '{isXTurn ? 'X' : "O"}' your Turn</h4>
                     <div className="board-row">
                         <Square onClick={() => handleClick(0)} value={state[0]} />
                         <Square onClick={() => handleClick(1)} value={state[1]} />
@@ -67,8 +67,10 @@ const Board = () => {
                         <Square onClick={() => handleClick(7)} value={state[7]} />
                         <Square onClick={() => handleClick(8)} value={state[8]} />
                     </div>
-                    <button onClick={handleReset}>Restart Game</button>
-                    <span> &copy;Bharat Ranjan 2022</span>
+                    <div className="bottom-row">
+                        <button onClick={handleReset}>Restart Game</button>
+                        <span> &copy;Bharat Ranjan 2022</span>
+                    </div>
                 </>
             }
 

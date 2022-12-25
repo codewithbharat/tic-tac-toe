@@ -6,6 +6,7 @@ const Game = () => {
         <div>
             <h1 className="text">Tic-Tac-Toe</h1>
             <Board />
+            <a href="https://github.com/codewithbharat/tic-tac-toe">View Source Code On Github</a>
         </div>
     )
 }
