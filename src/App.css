@@ -37,6 +37,7 @@ body {
 .sqaureText {
   font-size: 80px;
   font-weight: 20;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.715);
 }
 
 .playerTurn {
