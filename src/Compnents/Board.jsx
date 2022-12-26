@@ -8,8 +8,8 @@ const ScoreBoard = () => {
     return (
         <div className="scoreBoard">
             <div className="title">score</div>
-            <div className="xScore">X - {xScore / 2}</div>
-            <div className="oScore">O - {oScore / 2}</div>
+            <div className="xScore">X - {xScore}</div>
+            <div className="oScore">O - {oScore}</div>
         </div>
     )
 }
