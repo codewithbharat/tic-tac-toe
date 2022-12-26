@@ -67,3 +67,17 @@ a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.409);
 }
+
+.scoreBoard {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid white;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 5px 0;
+  box-shadow: inset;
+}
+
+.scoreBoard .title {
+  text-transform: uppercase;
+}

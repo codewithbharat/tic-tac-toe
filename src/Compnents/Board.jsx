@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 import { Square } from "./sqaureBox";
 
+let xScore = 0;
+let oScore = 0;
+
+const ScoreBoard = () => {
+    return (
+        <div className="scoreBoard">
+            <div className="title">score</div>
+            <div className="xScore">X - {xScore / 2}</div>
+            <div className="oScore">O - {oScore / 2}</div>
+        </div>
+    )
+}
+
 const Board = () => {
     const [state, setState] = useState(Array(9).fill(null));
     const [isXTurn, setIsXTurn] = useState(true);
@@ -8,15 +21,12 @@ const Board = () => {
     const handleReset = () => {
         setState(Array(9).fill(null));
     }
-
     const checkWinner = () => {
-
         const copyState = Object.values({ ...state });
         let count = 0;
         for (let value of copyState) {
             if (value == null) {
                 count++;
-                console.log(count);
             }
         }
         const winnerLogic = [
@@ -33,6 +43,12 @@ const Board = () => {
         for (let logic of winnerLogic) {
             const [a, b, c] = logic;
             if (state[a] !== null && state[a] === state[b] && state[b] === state[c]) {
+                if (state[a] === 'O') {
+                    oScore++;
+                }
+                if (state[a] === 'X') {
+                    xScore++;
+                }
                 return state[a];
             }
         }
@@ -61,6 +77,7 @@ const Board = () => {
 
     return (
         <div className="board-container">
+            <ScoreBoard />
             {isWinner ?
                 <>
                     <span>Player "{isWinner}" won the battel!</span>
